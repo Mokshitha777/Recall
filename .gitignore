@@ -1,0 +1,27 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+**/application-local.properties
+
+# Frontend
+**/node_modules/
+**/dist/
+
+# Backend
+**/target/
+**/build/
+
+# IDE and logs
+.idea/
+.vscode/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets files
+recall-backend.env
+**/recall-backend.env
