@@ -1,48 +1,15 @@
-HEAD
-# Recall — Learn From Every Round
+## Product Write-Up
 
-Recall is an interview preparation and learning platform that helps users reflect on interview experiences, track learning progress, and improve through AI-powered coaching.
+### 1. Problem and Target Users
+Recall — Learn From Every Round is a personal, AI-powered interview preparation workspace for students and job seekers. Interview experiences, feedback, and learning goals are often scattered across notes and platforms, making it difficult to identify recurring mistakes and track improvement. Recall brings interview records, learning progress, and AI-assisted feedback into one place so users can turn every interview into a learning opportunity.
 
-## Features
+### 2. Key Product Decisions
+- **A unified workspace:** Interview experiences and learning topics are managed in one application, helping users connect past performance with future preparation.
+- **AI-powered coaching:** Recall includes an AI Coach that analyzes interview responses and provides feedback, helping users reflect on their answers and identify areas for improvement.
+- **A focused, simple interface:** The application prioritizes essential workflows—recording experiences, tracking learning, and reviewing feedback—rather than overwhelming users with unnecessary features.
 
-- Interview experience logging
-- Learning topics and progress tracking
-- AI interview coach
-- Personal interview preparation dashboard
+### 3. Scope and Future Improvements
+To keep the first version focused, I left out advanced analytics, collaborative study groups, automated interview scheduling, and integrations with external job platforms. With more time, I would add progress visualizations, personalized study plans based on past interviews, mock interview simulations, and reminders for learning goals. I would also improve automated testing and monitoring for the deployed application.
 
-## Tech Stack
-
-- **Frontend:** React, Vite, JavaScript, CSS
-- **Backend:** Java, Spring Boot
-- **Database:** PostgreSQL
-- **AI:** Groq API
-
-## Project Structure
-
-- `frontend/` — React frontend
-- `backend/` — Spring Boot backend
-
-## Local Setup
-
-### Frontend
-
-1. Open a terminal inside `frontend/`.
-2. Run `npm install`.
-3. Configure the frontend API base URL as documented in its `.env.example`.
-4. Run `npm run dev`.
-
-### Backend
-
-1. Open `backend/` in IntelliJ IDEA.
-2. Configure PostgreSQL and the required environment variables.
-3. Run the Spring Boot application.
-
-Never commit API keys, database passwords, JWT secrets, or other credentials.
-
-## Status
-
-Under development.
-
-# Recall
-Reacll-Learn from Every Round. A peronal Ai-powered interview preparation workspace.
-e06ea35b5094f19d585e5a1bd64eaa628abfda2c
+### 4. Development Challenges and Learnings
+Deploying a full-stack application introduced challenges beyond local development. The frontend initially continued to call `localhost` after deployment, preventing it from reaching the hosted backend. After updating the API base URL, browser CORS restrictions blocked cross-origin requests from Vercel. I updated the Spring Security CORS configuration to allow the deployed frontend and redeployed the backend. I also configured a hosted PostgreSQL database and environment variables for deployment. These issues reinforced the importance of testing the complete application in its production environment, not just on a local machine.
