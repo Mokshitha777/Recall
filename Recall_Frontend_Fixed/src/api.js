@@ -1,4 +1,5 @@
-const BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace(/\/$/, '')
+// const BASE = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080').replace(/\/$/, '')
+const BASE = (import.meta.env.VITE_API_BASE_URL || 'https://recall-backend-gbbg.onrender.com').replace(/\/$/, '')
 const getToken = () => localStorage.getItem('recall_token')
 
 async function request(path, options = {}) {
