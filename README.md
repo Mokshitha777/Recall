@@ -1,3 +1,4 @@
+HEAD
 # Recall — Learn From Every Round
 
 Recall is an interview preparation and learning platform that helps users reflect on interview experiences, track learning progress, and improve through AI-powered coaching.
@@ -41,3 +42,7 @@ Never commit API keys, database passwords, JWT secrets, or other credentials.
 ## Status
 
 Under development.
+
+# Recall
+Reacll-Learn from Every Round. A peronal Ai-powered interview preparation workspace.
+e06ea35b5094f19d585e5a1bd64eaa628abfda2c
